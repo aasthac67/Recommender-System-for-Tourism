@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Nanum Pen Script' rel='stylesheet'>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" >
+<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.mySlides {display:none;}
+</style>
+<style >
+  body{
+    margin: 0;
+    padding: 0;
+    align-content: center;
+  }
+	.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    border-radius: 0%;
+}
+	.fa-facebook {
+  background: #3B5998;
+  color: white;
+  margin-left: 830px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  margin-left: 10px;
+}
+.fa-instagram {
+  background: purple;
+  color: white;
+  margin-left: 10px;
+}
+
+	html, body{
+		height:100%;
+		
+
+	}
+	.container{
+		height:100%;
+		background-repeat:no-repeat;
+		background-size:cover;
+		
+	}
+	html { 
+                scroll-behavior: smooth; 
+            } 
+	h1{
+		
+	font-size:8em;
+	color:black;
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-family:'Nanum Pen Script';
+	position:absolute;
+	top:40%;
+	left:50%;
+	transform: translate(-50%,-50%)
+	}
+	
+	h3{
+	font-size:2em;
+	color:Teal;
+  font-family: 'Merienda';
+  font-size: 40px;
+	}
+
+	.topnav {
+  background-color: white;
+  overflow: hidden;
+}
+
+	.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: gray;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: white;
+  color: red;
+}
+
+div.last{
+  font-size: 20px;
+  text-align: center;
+}
+
+div.gallery {
+  align-content: center;
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 500px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+div.a {
+  text-align: center;
+}
+h1.serif{
+font-family: 'Parisienne';
+font-size: 160px;
+color: OldLace;
+z-index: 10;
+text-shadow: 3px 3px #BC8F8F
+}
+</style>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 2000, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+#section1 {
+  height: 600px;
+  html, body{
+		height:100%;
+		
+
+	}
+	.container{
+		height:100%;
+		background-repeat:no-repeat;
+		background-size:cover;
+		
+	}
+	html { 
+                scroll-behavior: smooth; 
+            } 
+  
+}
+
+#section2 {
+  height: 600px;
+  background-color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+
+</body>
+
+ <div class="container">
+
+<h1 class="serif">Welcome To Karnataka</h1>
+
+<div class="w3-content w3-section" style="max-width:6000px" top=>
+  <img class="mySlides" src="/static/images/mysore.jpg" style="width:100%" height="960">
+  <img class="mySlides" src="/static/images/beach.jpg" style="width:100%" height="960">
+  <img class="mySlides" src="/static/images/image3.jpg" style="width:100%" height="960">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+
+<div class="main" id="section2">
+<p>                                </p>
+<p>                                </p>
+<p>                                </p>
+<div class="a">
+<h3>The World is a book and those who do not travel read only a page</h3>
+</div>
+  
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="/static/images/travel.jpg">
+      <img src="/static/images/travel.jpg"  width="600" height="400" class="center">
+	  <div class="desc">TRAVEL</div>
+    </a>
+    
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="/static/images/eat.jpeg">
+      <img src="/static/images/eat.jpeg"  width="600" height="400" >
+	  <div class="desc">EAT</div>
+	  
+    </a>
+    
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="/static/images/rellax.jpg">
+      <img src="/static/images/rellax.jpg"  width="600" height="600">
+	  <div class="desc">RELAX</div>
+    </a>
+    
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="/static/images/adventure.jpeg">
+      <img src="/static/images/adventure.jpeg"  width="600" height="600" class="center">
+    <div class="desc">ADVENTURE</div>
+    </a>
+    
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class='last' style="padding:6px;">
+  <p> Get places recommended for yourself !!!</p>
+  <form method="POST" action="">
+    <input type="submit" value="Lets go!!">
+  </form>
+ 
+  <p>For any further queries you can contact us on.......</p>
+
+</div>
+
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-instagram"></a>
+  
+  <br><br>
+</div>
+
+</body>
+</html>
